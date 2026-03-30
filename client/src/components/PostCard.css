@@ -1,0 +1,148 @@
+/* Using a reset to make sure fonts are clean */
+:root {
+    --primary-blue: #0079D3; /* A bright, clean blue */
+    --text-main: #1C1C1C;
+    --text-subtle: #787C7E;
+    --bg-poll: #F6F7F8;
+    --border-color: #EDEFF1;
+}
+
+.post-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px; /* softer, modern corners */
+    padding: 18px 20px;
+    margin-bottom: 24px;
+    max-width: 580px; /* Standard feed width */
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Hover effect on the whole card */
+.post-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    border-color: #d7dae0;
+}
+
+/* Header Area (User Info and Privacy) */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-placeholder {
+    width: 36px;
+    height: 36px;
+    background-color: var(--primary-blue);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.meta-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.timestamp {
+    color: var(--text-subtle);
+    font-size: 0.85rem;
+}
+
+.privacy-badge span {
+    background: #F0F2F5;
+    color: var(--text-subtle);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* Body Area (Title and Description) */
+.post-title {
+    font-size: 1.35rem; /* Large and readable */
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 10px 0 6px 0;
+    line-height: 1.3;
+}
+
+.post-description {
+    color: #333;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+/* Poll Buttons Area */
+.card-poll {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.poll-option-btn {
+    background-color: var(--bg-poll);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 14px 18px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.92rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1.4;
+}
+
+/* Interactivity for poll options */
+.poll-option-btn:hover {
+    background-color: #E3E6E8;
+    border-color: #D7D9DB;
+    transform: translateY(-1px); /* slight lift effect */
+}
+
+/* The Footer Actions */
+.card-footer {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 14px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: var(--text-subtle);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.action-btn:hover {
+    color: var(--primary-blue);
+    background-color: #F0F7FF;
+}
